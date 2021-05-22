@@ -7,6 +7,7 @@
 
 <script>
 
+
 export default {
   name: "PieChartComponent",
   data() {
@@ -24,8 +25,10 @@ export default {
       this.chartData = Object.entries(this.returnedData);
    }
   },
-  mounted() {
+  created() {
     this.$store.dispatch('pullData')
+  },
+  mounted() {
     this.pieChartData()
   }
 };
