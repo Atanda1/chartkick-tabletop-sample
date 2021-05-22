@@ -22,7 +22,6 @@ export default new Vuex.Store({
     pullData({commit}) {
       Tabletop.init({
         key: process.env.VUE_APP_SPREADSHEET_URL,
-        //callback: showInfo,
         simpleSheet: true,
       })
       .then((data) => {
