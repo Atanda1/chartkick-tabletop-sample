@@ -6,30 +6,15 @@
 </template>
 
 <script>
-
-
 export default {
   name: "PieChartComponent",
-  data() {
-    return {
-      chartData: []  
-    }
-  },
   computed: {
     returnedData() {
       return this.$store.getters.getData
     }
   },
-  methods: {
-   pieChartData() {
-      this.chartData = Object.entries(this.returnedData);
-   }
-  },
   created() {
     this.$store.dispatch('pullData')
-  },
-  mounted() {
-    this.pieChartData()
   }
 };
 </script>
